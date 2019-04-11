@@ -9,8 +9,8 @@ app.use(express.json());
 app.get('/users', (req,res) => {
 	axios.get('https://randomuser.me/api')
 		.then( response => {
-			// this overwrites previous in-memory values
-			user = response.data;
+			// push NEW data into the users array
+			users.push(response.data);
 	})
 	.catch( error => {
 		console.log(error);
