@@ -15,6 +15,7 @@ app.get('/users', (req,res) => {
 	.catch( error => {
 		console.log(error);
 	}
+	res.status(200).json(users);
 });
 
 app.get('/users/firstname/:firstname', (req, res) => {
