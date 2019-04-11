@@ -27,7 +27,7 @@ app.get('/users/firstname/:firstname', (req, res) => {
 
 app.post('/users', (req, res) => {
 	// add user to the users in-memory
-	users.push(req.body)
+	users.push(req.body);
 	res.status(201).json({ message: 'User successfully created!' });
 });
 
